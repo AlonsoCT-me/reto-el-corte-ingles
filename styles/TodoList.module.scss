@@ -1,0 +1,109 @@
+.container {
+  @apply font-montserrat p-6 bg-white rounded-lg shadow-md min-w-[auto] max-w-[700px] mx-auto mt-10;
+
+  h2 {
+    @apply font-montserrat text-[#333333] font-normal text-center mb-3 text-2xl;
+  }
+
+  p {
+    @apply font-montserrat;
+    &.introtxt {
+      @apply text-sm text-[#333333] text-center;
+    }
+  }
+
+}
+
+.inputGroup {
+  @apply flex mb-4 gap-x-2;
+
+  button {
+    @apply min-w-[100px] font-light font-montserrat bg-transparent text-[#324BFF] border border-solid border-[#324BFF] px-4 py-2 rounded-[50px] hover:bg-[#324BFF] hover:text-white;
+
+    &:disabled {
+      @apply opacity-60 cursor-not-allowed;
+    }
+
+    &:hover,&:focus {
+      transition: background-color 0.3s;
+    }
+
+    &.buttonAdd {
+      @apply bg-[#324BFF] ml-auto text-white border border-solid border-[#324BFF] px-4 py-2 rounded-[50px] hover:bg-[#1c2b95] hover:text-white;
+
+    }
+
+    &.buttonDelete,
+    &.buttonCancel {
+      @apply bg-transparent text-[#324BFF] border border-solid border-[#324BFF] rounded-[50px] px-4 py-2 hover:bg-[#324BFF] hover:text-white;
+    }
+
+    &.buttonUndo {
+      @apply min-w-2 bg-transparent text-[#324BFF] border border-solid border-[#324BFF] rounded-[50px] px-4 py-2 hover:bg-[#324BFF] hover:text-white;
+    }
+
+  }
+
+}
+
+.input {
+  @apply flex-1 border text-[#999] border-[#ccc] w-full p-[10px] my-[10px] focus:outline-none;
+}
+
+
+.list {
+  @apply my-4 space-y-2 p-[13px] bg-[#F7F7F7];
+}
+
+.listItem {
+  @apply font-montserrat font-light text-sm py-[4px] px-[10px] cursor-pointer flex justify-between items-center;
+}
+
+.listItemSelected {
+  @apply bg-[#324BFF] text-white;
+}
+
+.listItemText {
+  @apply flex-1;
+}
+
+.iconButton {
+  @apply ml-2 text-red-500 hover:text-red-600;
+}
+
+.modalBackground {
+  @apply fixed w-full h-full bg-[rgba(0,0,0,0.5)] flex items-center justify-center z-[1000] left-0 top-0;
+
+}
+
+.modal {
+  @apply bg-[white] shadow-[0px_10px_24px_#0000001F] animate-[slideIn_0.3s_ease-out] max-w-[450px] w-full px-[50px] py-10 rounded-lg;
+
+  p {
+    @apply font-montserrat;
+  }
+
+  .inputGroup {
+    @apply flex justify-end gap-x-2.5 mt-5;
+
+
+    button {
+      @apply min-w-[128px];
+    }
+
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
